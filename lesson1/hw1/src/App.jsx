@@ -4,7 +4,7 @@ import { userData, UserDataContext } from "./userData-context";
 
 class App extends Component {
   state = {
-    userDate: {
+    userData: {
       name: "Nikola Tesla",
       avatar_url: "https://avatars3.githubusercontent.com/u10001",
     },
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="page">
-        <UserDataContext.Provider value={this.state.userDate}>
+        <UserDataContext.Provider value={this.state.userData}>
           <Header />
         </UserDataContext.Provider>
       </div>
