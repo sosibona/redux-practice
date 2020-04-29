@@ -4,7 +4,10 @@ import { userData, UserDataContext } from "./userData-context";
 
 class App extends Component {
   state = {
-    userDate: userData,
+    userDate: {
+      name: "Nikola Tesla",
+      avatar_url: "https://avatars3.githubusercontent.com/u10001",
+    },
   };
   render() {
     return (
