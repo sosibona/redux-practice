@@ -4,7 +4,7 @@ import { themes, ThemeContext } from "./themes-contex";
 
 class App extends Component {
   state = {
-    theme: themes.light,
+    theme: themes.dark,
   };
 
   toggleTheme = () => {
@@ -20,7 +20,7 @@ class App extends Component {
         <ThemeContext.Provider value={this.state.theme}>
           <ThemedButton onClick={this.toggleTheme}>Dynamic Theme</ThemedButton>
         </ThemeContext.Provider>
-        
+
           <ThemedButton onClick={this.toggleTheme}>Default Theme</ThemedButton>
       </div>
     );
