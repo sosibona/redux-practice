@@ -1,5 +1,5 @@
 import store from './store'
-import { addUser, deleteUser } from './user.action'
+import { addUser, deleteUser } from './user.actions'
 
 
 store.subscribe(() => {
