@@ -13,7 +13,11 @@ const usersReducer = (state = initialState, action) => {
       }
     }
     case DELETE_USER: {
-      const newList = state.usersList.filter(user => user.id !== action.payload.userId);
+      const newList = state.usersList.filter(user => {
+        // console.log('user');
+        // console.log(user);
+        return user.id !== action.payload.userId
+      });
       return {
         ...state,
         usersList: newList,
@@ -27,6 +31,7 @@ const usersReducer = (state = initialState, action) => {
             ...action.payload.userData,
           }
         }
+        return user;
       })
       return {
         ...state,
