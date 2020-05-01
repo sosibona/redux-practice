@@ -4,7 +4,7 @@ import { createStore, combineReducers } from 'redux';
 
 const appReducer = combineReducers({
   counter: counterReducer,
-  usersList: usersReducer,
+  users: usersReducer,
 })
 
 const store = createStore(
