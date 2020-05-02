@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import * as usersActions from "./users.actions";
+import * as userActions from "./users.actions";
 
 class Users extends Component {
   onUserCreate = () => {
@@ -44,8 +44,8 @@ const mapState = (state) => {
 };
 
 const mapDispatch = {
-  createUser: usersActions.addUser,
-  deleteUser: usersActions.deleteUser,
+  createUser: userActions.addUser,
+  deleteUser: userActions.deleteUser,
 };
 
 const connector = connect(mapState, mapDispatch);
