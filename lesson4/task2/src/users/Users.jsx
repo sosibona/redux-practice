@@ -4,7 +4,7 @@ import * as usersActions from './users.actions'
 
 class Users extends Component {
 
-  onCreateUser = () => {
+  onUserCreate = () => {
     const id = Math.round(Math.random() * 1000000);
     const newUser = {
       id,
@@ -21,7 +21,7 @@ class Users extends Component {
     const {users, deleteUser} = this.props;
     return (
       <div className="users">
-        <button className="users__create-btn" onClick={this.onCreateUser}>Create user</button>
+        <button className="users__create-btn" onClick={this.onUserCreate}>Create user</button>
         <ul className="users__list">
           {users.map(user => (
             <li key={user.id} className="users__list-item">
