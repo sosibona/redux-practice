@@ -4,7 +4,7 @@ const initialState = {
   usersList: [],
 }
 
-export const usersReducer = (state = initialState, action) => {
+const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_USER: {
       return {
@@ -23,3 +23,5 @@ export const usersReducer = (state = initialState, action) => {
       return state;
   }
 }
+
+export default usersReducer;
