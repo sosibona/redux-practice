@@ -22,7 +22,7 @@ class Users extends Component {
         <ul className="users__list">
           {users.map((user) => (
             <li key={user.id} className="users__list-item">
-              <span>{user.name}</span>
+              {user.name}
               <button
                 className="users__delete-btn"
                 onClick={() => deleteUser(user.id)}
