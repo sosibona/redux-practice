@@ -8,8 +8,7 @@ const Pagination = ({
   itemsPerPage,
 }) => {
   const isPrevPageAvailable = currentPage < 1;
-  const isNextPageAvailable =
-    Math.ceil(totalItems / itemsPerPage) === currentPage + 1;
+  const isNextPageAvailable = (currentPage + 1) * 3 > totalItems;
   
     console.log('pag props')
     console.log({
