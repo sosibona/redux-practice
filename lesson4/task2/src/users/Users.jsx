@@ -14,6 +14,7 @@ class Users extends Component {
 
   render() {
     const { users, deleteUser } = this.props;
+    console.log(users)
     return (
       <div className="users">
         <button className="users__create-btn" onClick={this.onUserCreate}>
