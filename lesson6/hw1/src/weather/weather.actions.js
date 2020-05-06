@@ -1,3 +1,5 @@
+import fetchWeatherData from "./weather.gateway";
+
 export const SHOW_WEATHER = "SHOW_WEATHER"
 export const WHEATHER_DATA_RECIEVED = "WHEATHER_DATA_RECIEVED"
 
@@ -20,15 +22,6 @@ export const weatherDataRecieved = weatherData => {
 
 export const getWeatherData = () => {
   return function (dispatch) {
-    console.log('fetch')
-    fetch(baseUrl)
-      .then(response => {
-        if (response.ok) {
-          return response.json()
-        } else {
-          throw new Error('failed data');
-        }
-      })
-      .then(weatherData => dispatch(weatherDataRecieved(weatherData)));
+    fetchWeatherData().then(weatherData => dispatch(weatherDataRecieved(weatherData)));
   }
 }
