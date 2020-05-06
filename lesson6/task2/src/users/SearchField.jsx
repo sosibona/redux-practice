@@ -7,7 +7,7 @@ class SearchField extends Component {
     userName: "",
   };
 
-  onChange = () => {
+  onChange = (event) => {
     this.setState({
       userName: event.target.value,
     });
