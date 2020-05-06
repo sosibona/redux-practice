@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux';
-import * as usersActions from './user.actions'
+import * as usersActions from './users.actions'
 
 
 class SearchField extends Component {
