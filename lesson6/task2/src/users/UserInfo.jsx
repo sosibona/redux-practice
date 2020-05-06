@@ -27,4 +27,4 @@ const mapState = state => {
   }
 }
 
-export default connect(mapStatem, null)(UserInfo);
+export default connect(mapState, null)(UserInfo);
