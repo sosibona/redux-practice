@@ -1,7 +1,7 @@
 import React from "react";
-import Spinner from "../Spinner";
+import Spinner from "./Spinner";
 import {connect } from 'react-redux';
-import {isFetchingSelector, userDataSelector} from './users.selectors'
+import {isFetchingSelector, userDataSelector} from './users.selector'
 
 const UserInfo = ({ userData, isFetching }) => {
   if (isFetching) {

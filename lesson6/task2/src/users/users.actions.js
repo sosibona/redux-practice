@@ -1,7 +1,7 @@
+import { getUserData } from "./users.gateway.js";
+
 export const SHOW_SPINNER = "SHOW_SPINNER";
 export const USER_DATA_RECEIVED = "USER_DATA_RECEIVED";
-
-const baseUrl = "https://api.github.com/users";
 
 export const showSpinner = () => {
   return {
@@ -19,10 +19,9 @@ export const userDataReceived = userData => {
 }
 
 export const fetchUserData = (userName) => {
-  return function(dispatch) {
-    dispatch(showSpinner())
-    fetch(`${baseUrl}/${userName}`)
-    .then((response) => response.json())
-    .then((userData) => dispatch(userDataReceived(userData)));
+  return function (dispatch, getState) {
+      dispatch(showSpinner());
+      getUserData(userName)
+          .then(userData => dispatch(userDataRecieved(userData)))
   }
 }
