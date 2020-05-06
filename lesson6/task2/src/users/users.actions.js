@@ -22,6 +22,6 @@ export const fetchUserData = (userName) => {
   return function (dispatch, getState) {
       dispatch(showSpinner());
       getUserData(userName)
-          .then(userData => dispatch(userDataRecieved(userData)))
+          .then(userData => dispatch(userDataReceived(userData)))
   }
 }
