@@ -1,4 +1,4 @@
-import { SHOW_SPINNER, USER_DATA_RECEIVED } from './users.actions';
+import { SHOW_SPINNER, USER_DATA_RECIEVED } from './users.actions';
 
 const initialState = {
   isFetching: false,
@@ -13,7 +13,7 @@ export const usersReducer = (state = initialState, action) => {
         isFetching: true,
       }
     }
-    case USER_DATA_RECEIVED: {
+    case USER_DATA_RECIEVED: {
       return {
         ...state,
         userData: action.payload.userData,
